@@ -14,11 +14,11 @@ trait ExceptionTrait
       return $this->ModelResponse($e);
     }
 
-      if ($this->isHttp($e)) {
-        return $this->HttpResponse($e);
-      }
+    if ($this->isHttp($e)) {
+      return $this->HttpResponse($e);
+    }
 
-        return parent::render($request, $e);
+    return parent::render($request, $e);
   }
 
   protected function isModel($e)
